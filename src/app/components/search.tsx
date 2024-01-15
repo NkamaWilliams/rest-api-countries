@@ -1,5 +1,5 @@
 'use client'
-import styles from "../search.module.css"
+import styles from "../styles/search.module.css"
 import { Search, Close } from "@mui/icons-material"
 import { useState } from "react"
 

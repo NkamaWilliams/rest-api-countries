@@ -4,6 +4,7 @@ import { Autocomplete, TextField, InputAdornment } from "@mui/material"
 import { Search } from "@mui/icons-material"
 import { useState,  useEffect } from "react"
 import SearchBox from "./search"
+import Filter from "./filter"
 
 export default function Control(){
   const [country, setCountry] = useState("")
@@ -24,9 +25,10 @@ export default function Control(){
   }, [])
 
   return(
-    <form>
+    <form className={styles.form}>
       <SearchBox options={countries} setChoice={setCountry} label="Search for a country..."/>
-      <p>{country}</p>
+      
+      <Filter setRegion={setFilter} options={regions}/>
     </form>
   )
 }

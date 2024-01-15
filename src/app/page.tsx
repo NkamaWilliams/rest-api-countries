@@ -16,6 +16,10 @@ export default function Home() {
       <section className={styles.section}>
         <Control/>
       </section>
+
+      <section>
+        
+      </section>
     </main>
   )
 }

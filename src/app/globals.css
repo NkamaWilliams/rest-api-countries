@@ -7,6 +7,7 @@
   --sidepad: 2rem 5rem;
   --highlightbg: hsl(207, 26%, 17%);
   --highlighttext: hsl(0, 0%, 100%);
+  --control-height: 50px;
 }
 
 * {
@@ -28,4 +29,8 @@ a {
 
 html{
   color-scheme: dark;
+}
+
+datalist{
+  display: none;
 }
