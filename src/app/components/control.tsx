@@ -6,23 +6,14 @@ import { useState,  useEffect } from "react"
 import SearchBox from "./search"
 import Filter from "./filter"
 
-export default function Control(){
+interface Props{
+  countries: string[],
+  regions: string[]
+}
+
+export default function Control({countries, regions}:Props){
   const [country, setCountry] = useState("")
-  const [regions, setRegions] = useState([""])
-  const [countries, setCountries] = useState([""])
   const [filter, setFilter] = useState("")
-
-  async function getAllCountries() {
-    const response = await fetch("https://restcountries.com/v3.1/all")
-    const data = await response.json()
-    let regionSet:string[] = Array.from(new Set(data.map((country:any) => country.region)))
-    setRegions(regionSet)
-    setCountries(data.map((country:any) => country.name.common))
-  }
-
-  useEffect(() => {
-    getAllCountries()
-  }, [])
 
   return(
     <form className={styles.form}>

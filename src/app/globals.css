@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,600;0,6..12,700;0,6..12,800;1,6..12,700&display=swap');
 :root {
   --bg1: hsl(0, 0%, 100%);
   --bg2: hsla(0, 0%, 98%, 0.953);
@@ -20,6 +21,11 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  font-family: "Nunito Sans";
+}
+
+h1, h2, h3, h4, h5{
+  font-weight: 800;
 }
 
 a {
